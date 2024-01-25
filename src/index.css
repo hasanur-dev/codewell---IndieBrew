@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .gradient {
+    background-image: linear-gradient(
+      145deg,
+      hsl(330deg 78% 82%) 0%,
+      hsl(331deg 75% 85%) 4%,
+      hsl(331deg 71% 87%) 9%,
+      hsl(332deg 64% 89%) 14%,
+      hsl(332deg 53% 91%) 20%,
+      hsl(332deg 34% 93%) 27%,
+      hsl(0deg 0% 95%) 36%,
+      hsl(344deg 0% 96%) 48%,
+      hsl(344deg 0% 97%) 60%,
+      hsl(344deg 0% 97%) 72%,
+      hsl(344deg 0% 98%) 82%,
+      hsl(344deg 0% 99%) 91%,
+      hsl(0deg 0% 100%) 100%
+    );
+    /* color: #ec489a7c; */
+  }
+  .gradient-2 {
+    background-image: linear-gradient(
+      130deg,
+      hsl(0deg 0% 100%) 0%,
+      hsl(287deg 100% 99%) 4%,
+      hsl(286deg 100% 99%) 8%,
+      hsl(286deg 100% 98%) 12%,
+      hsl(286deg 100% 97%) 18%,
+      hsl(286deg 100% 97%) 25%,
+      hsl(286deg 100% 96%) 34%,
+      hsl(286deg 96% 96%) 47%,
+      hsl(286deg 88% 96%) 63%,
+      hsl(286deg 77% 97%) 75%,
+      hsl(286deg 65% 97%) 84%,
+      hsl(286deg 48% 97%) 90%,
+      hsl(286deg 28% 98%) 96%,
+      hsl(0deg 0% 98%) 100%
+    );
+  }
+  @keyframes timer {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  @keyframes confirm {
+    0% {
+      opacity: 100;
+    }
+    100% {
+      opacity: 0;
+      display: hidden;
+    }
+  }
+
+  .confirm > div {
+    animation: timer 2s linear forwards;
+  }
+  .confirm {
+    animation: confirm 500ms 2s linear forwards;
+  }
+}
